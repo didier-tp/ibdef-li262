@@ -1,0 +1,18 @@
+LI262 : Typescript , Angular , bootstrap-css
+Formateur : Didier Defrance
+
+Horaires (à débattre): 9h.. 12h30  et   13h30 17h..
+
+URL (readonly) : pour (doc, tps, ...)
++ partage/formateur (paris)
+https://github.com/didier-tp/ibdef-li262.git
+
+logiciels à télécharger et installer :
+-------------------------------------
+  - nodeJs 
+  - visual studio code
+
+
+Autres url (exemples):
+https://github.com/didier-mycontrib/angular8plus (partie ng-bs4-app)
+https://github.com/didier-mycontrib/tp_node_js (parties backend-tp-api et chat-socket-io )
