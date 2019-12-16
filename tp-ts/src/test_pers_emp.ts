@@ -1,6 +1,7 @@
-
 import { Personne } from "./personne";
 import { Employe } from "./employe";
+
+
 
 let p1 : Personne;
 p1 = new Personne();
