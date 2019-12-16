@@ -1,11 +1,13 @@
 class Personne{
+    nom : string;
+    prenom : string;
+    age :  number;
 
-    constructor(public nom:string="?",public prenom:string="?",private _age:number=0){
+    constructor(nom:string="?",prenom:string="?",age:number=0){
+        this.nom=nom;
+        this.prenom=prenom;
+        this.age=age;
     }
-
-    public get age() { return this._age; }
-    public set age(newAge : number) { if(newAge>=0) 
-                                          this._age =newAge; }
 
     nomComplet():string{
         return `${this.prenom} ${this.nom}`;
@@ -22,4 +24,4 @@ console.log(p1.nomComplet());
 console.log(p1);
 let p2 = new Personne("Therieur","alex",30);
 console.log(p2.nomComplet());
-console.log( JSON.stringify(p2));
+console.log(p2);
