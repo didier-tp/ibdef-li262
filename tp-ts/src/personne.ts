@@ -20,7 +20,7 @@ class Employe extends Personne{
     }
 
     nomComplet():string{
-        return `${this.prenom} ${this.nom} (employe)`;
+        return super.nomComplet() + " (employe) ";
     }
 } 
 
