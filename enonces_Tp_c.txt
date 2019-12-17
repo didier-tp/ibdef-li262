@@ -1,4 +1,4 @@
-enonces de Tps possibles (partie "c")
+﻿enonces de Tps possibles (partie "c")
 =====================================
 
 3a. nouveaux composants / angular
@@ -31,7 +31,7 @@ variantes (possibles/faculatives) sur tva.component:
   (change) sur liste déroulante (<select>) .
 - afficher (pour le fun) le montant ht en bleu si positif (ou rouge si négatif)
   en utilisant la syntaxe [style.color]="..."
-  et/ou [style.class]="...." (+ classe de style coté .(s)css )
+  et/ou [class.nomClasseCss]="...." (+ classe de style coté .(s)css )
 
 3c. validations de formulaire (en mode "template-driven" puis éventuellement "model-driven")
 créer un nouveau composant "LoginComponent" de premier niveau (dans src/app)

@@ -25,4 +25,8 @@ export class TvaComponent implements OnInit {
   ngOnInit() {
   }
 
+  methIsNaN(val : any) : boolean {
+    return isNaN(val);
+  }
+
 }

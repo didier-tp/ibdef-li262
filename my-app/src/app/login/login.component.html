@@ -1,0 +1,9 @@
+<p>login</p>
+<form #formLogin="ngForm">
+<label>username:</label> <input type="text" name="username" [(ngModel)]="login.username" required /> <br/>
+<label>password:</label> <input type="text" name="password" [(ngModel)]="login.password" required /> <br/>
+<label>password:</label> <input type="text" name="roles" [(ngModel)]="login.roles" required /> <br/>
+<input type="button" value="login" (click)="onLogin()"
+       [disabled]="!formLogin.form.valid" />
+</form>
+message={{message}} <br/>

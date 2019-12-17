@@ -1,7 +1,7 @@
 <p>calcul de tva </p>
 ht : 
 <input type="text" [(ngModel)]="ht" 
-             [class.positif]="ht>=0" [class.negatif]="ht<0"
+             [class.positif]="ht>=0" [class.negatif]="methIsNaN(ht) || ht<0"
             (input) ="onCaclulerTvaEtTtc()" />
     <!-- <input type="text" [(ngModel)]="ht" 
              [style.color]="ht>=0 ? 'blue' : 'red' "
