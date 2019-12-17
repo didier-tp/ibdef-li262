@@ -1,1 +1,8 @@
-<p>tva works!</p>
+<p>calcul de tva </p>
+ht : <input type="text" [(ngModel)]="ht" /> <br/>
+taux : <select [(ngModel)]="taux">
+    <option *ngFor="let t of listeTaux">{{t}}</option>
+</select> <br/>
+<input type="button" value="calculer" (click)="onCaclulerTvaEtTtc()" /> <br/>
+tva = <b>{{tva}}</b> <br/>
+ttc = <b>{{ttc}}</b> <br/>
