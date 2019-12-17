@@ -1,5 +1,7 @@
+$vertQuivaBien : #42A948; /* green */
+
 .ng-valid[required] {
-    border-left: 5px solid #42A948; /* green */
+    border-left: 5px solid $vertQuivaBien 
     }
     
 input.ng-invalid {
