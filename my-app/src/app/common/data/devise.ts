@@ -1,0 +1,6 @@
+//DTO (Data Transfert Object / json)
+export class Devise {
+    code : string; //ex: "EUR" , "USD" , ...
+    name : string; //ex: "euro" , "dollar" , ...
+    change : number; //nb ... pour 1 dollar
+}
