@@ -1,5 +1,9 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
+export interface ChangeHumeurEvent {
+  value : string;
+}
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -11,10 +15,10 @@ export class FooterComponent implements OnInit {
   listeHumeurs= [ "?" , "bonneHumeur" , "mauvaiseHumeur"];
 
   @Output()
-  changementHumeur : EventEmitter<{value:string}> = new EventEmitter<{value:string}>();
+  changementHumeur : EventEmitter<ChangeHumeurEvent> = new EventEmitter<ChangeHumeurEvent>();
 
   onChangeHumeur(){
-    this.changementHumeur.emit({value:this.humeur});
+    this.changementHumeur.emit( { value: this.humeur } );
   }
 
 
