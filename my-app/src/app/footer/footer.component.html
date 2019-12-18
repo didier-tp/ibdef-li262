@@ -5,4 +5,9 @@ humeur: <select [value]="humeur" (change)="onChangeHumeur($event)">
 couleurFondPreferee: <select [(ngModel)]="preferencesService.couleurFondPreferee">
         <option *ngFor="let c of listeCouleurs">{{c}}</option>
     </select>
+&nbsp;
+    langue:<select [(ngModel)]="traductionService.langue" >
+        <option>en</option>
+        <option>fr</option>
+    </select>
 </p>

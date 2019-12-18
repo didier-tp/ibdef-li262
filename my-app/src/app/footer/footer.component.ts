@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { PreferencesService } from '../common/service/preferences.service';
+import { TraductionService } from '../common/service/traduction.service';
 
 export interface ChangeHumeurEvent {
   value : string;
@@ -26,7 +27,8 @@ export class FooterComponent implements OnInit {
 
   listeCouleurs = ["yellow" , "lightgrey"  , "cyan" ];
 
-  constructor(public preferencesService : PreferencesService ) { 
+  constructor(public preferencesService : PreferencesService,
+              public traductionService : TraductionService ) { 
     //injection automatique du service @injectable via constructeur de composant 
     //angular 
   }
