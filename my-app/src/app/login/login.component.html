@@ -1,28 +1,25 @@
 <p>login</p>
 <form #formLogin="ngForm" class="form-horizontal">
-<div class="row form-group">      
-      <label class="control-label col-sm-4">username:</label> 
-      <div class="col-sm-8">
+<bsu-my-fg-label label="username">
          <input type="text" class="form-control" name="username" [(ngModel)]="login.username" 
           pattern="[A-Za-z][a-z1-9]+"   required />
-      </div>
-</div>
+</bsu-my-fg-label>
 <div class="row form-group">
-      <label class="control-label col-sm-4">password:</label> 
-      <div class="col-sm-8">
+      <label class="control-label col-sm-3">password:</label> 
+      <div class="col-sm-9">
        <input type="text" class="form-control" name="password" pattern=".{4,32}"
             [(ngModel)]="login.password" required /> 
       </div>
 </div>
 <div class="row form-group">
-      <label class="control-label col-sm-4">roles:</label> 
-      <div class="col-sm-8">
+      <label class="control-label col-sm-3">roles:</label> 
+      <div class="col-sm-9">
       <input type="text" class="form-control" name="roles" pattern="[a-z,]+"
             [(ngModel)]="login.roles" required /> 
       </div>
 </div>
 <div class="row form-group">
-      <div class="offset-sm-4 col-sm-8">
+      <div class="offset-sm-3 col-sm-9">
          <input type="button" class="btn btn-primary" value="login" (click)="onLogin()"
             [disabled]="!formLogin.form.valid" />
       </div>
