@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { PreferencesService } from '../common/service/preferences.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit, OnChanges {
   @Input()
   titre : string = "titre par defaut";
 
-  constructor() {
+  constructor(public preferencesService : PreferencesService) {
     console.log("constructor() appele avec titre = " + this.titre);
    }
 

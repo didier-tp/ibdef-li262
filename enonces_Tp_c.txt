@@ -110,7 +110,7 @@ console.log() ou alert() ou ...
 via quelques ajouts de console.log()
 
 3i. intégration d'un module de composants personnalisés et réutilisables "bs-util":
-- télécharger le zip de https://github.com/didier-mycontrib/tp_angular8+
+- télécharger le zip de https://github.com/didier-mycontrib/angular8plus
 - extraire le contenu de ce .zip dans un répertoire temporaire.
 - recopier toute la partie ng-bs4-app/src/bs-util au sein de votre projet angular
   my-app/src/bs-util (src/bs-util doit normalement être à coté de src/app) .

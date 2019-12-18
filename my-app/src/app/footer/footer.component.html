@@ -2,4 +2,7 @@
 humeur: <select [value]="humeur" (change)="onChangeHumeur($event)">
     <option *ngFor="let h of listeHumeurs" [value]="h">*{{h}}*</option>
 </select>
+couleurFondPreferee: <select [(ngModel)]="preferencesService.couleurFondPreferee">
+        <option *ngFor="let c of listeCouleurs">{{c}}</option>
+    </select>
 </p>
