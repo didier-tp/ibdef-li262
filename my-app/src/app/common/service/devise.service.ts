@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Devise } from '../data/devise';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,17 +14,17 @@ export class DeviseService {
     { code : "JPY" , name : "yen" , change : 125} 
   ];
 
-  //rechercherDevises() : Observable<Devise[]> {
-  public rechercherDevises() : Devise[] {
-    //préversion de simulation
-    return this.devises;
+  rechercherDevises() : Observable<Devise[]> {
+    //préversion de simulation (compatible futur appel asynchrone)
+    return of(this.devises);
   }
 
-  public convertir(codeMSource:string , codeMCible : string , montant: number) : number {
+  public convertir(codeMSource:string , codeMCible : string , montant: number) 
+                      : Observable<number> {
      //préversion de simulation
      console.log("codeMSource="+codeMSource);
      console.log("codeMCible="+codeMCible);
-     return montant * 2.0;
+     return of(montant * 2.0);
   }
 
   constructor() { }
