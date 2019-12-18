@@ -1,5 +1,5 @@
 <p>footer - 
-humeur: <select [(ngModel)]="humeur" (change)="onChangeHumeur()">
-    <option *ngFor="let h of listeHumeurs">{{h}}</option>
+humeur: <select [value]="humeur" (change)="onChangeHumeur($event)">
+    <option *ngFor="let h of listeHumeurs" [value]="h">*{{h}}*</option>
 </select>
 </p>

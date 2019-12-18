@@ -17,7 +17,9 @@ export class FooterComponent implements OnInit {
   @Output()
   changementHumeur : EventEmitter<ChangeHumeurEvent> = new EventEmitter<ChangeHumeurEvent>();
 
-  onChangeHumeur(){
+  onChangeHumeur(evt : any ){
+    this.humeur = evt.target.value;
+    console.log("humeur="+this.humeur);
     this.changementHumeur.emit( { value: this.humeur } );
   }
 
