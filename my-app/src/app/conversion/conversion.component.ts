@@ -17,9 +17,13 @@ export class ConversionComponent implements OnInit {
 
   onConvertir(){
     //préversion:
-    this.montantConverti = this.deviseService.convertir(this.codeDeviseSource,
-                                                        this.codeDeviseCible,
-                                                        this.montant);
+    this.deviseService.convertir(this.codeDeviseSource,
+                                this.codeDeviseCible,
+                                this.montant)
+          .subscribe(
+            (sommeConvertie: number)=>{ this.montantConverti = sommeConvertie },
+            (error)=>{ console.log(error); }
+          );
   }
 
   constructor(private deviseService: DeviseService) {
@@ -27,7 +31,14 @@ export class ConversionComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.listeDevises = this.deviseService.rechercherDevises();
+     this.deviseService.rechercherDevises()
+         .subscribe(
+           
+           (tabDevises:Devise[])=>{ this.listeDevises = tabDevises;
+                                    console.log("tabDevises:" + tabDevises)
+                                  },
+            (error)=>{ console.log("erreur:" + error);}                      
+         );
   }
 
 }
