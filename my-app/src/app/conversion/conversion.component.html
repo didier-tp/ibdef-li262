@@ -1,11 +1,11 @@
 <p>conversion de devise</p>
 montant : <input type="text" [(ngModel)]="montant" /> <br/>
 monnaieSource: <select [(ngModel)]="codeDeviseSource">
-    <option *ngFor="let d of listeDevises" [ngValue]="d">{{d.code}}</option>
+    <option *ngFor="let d of listeDevises" >{{d.code}}</option>
 </select> <br/>
 
 monnaieCible: <select [(ngModel)]="codeDeviseCible">
-        <option *ngFor="let d of listeDevises" [ngValue]="d">{{d.code}}</option>
+        <option *ngFor="let d of listeDevises" >{{d.code}}</option>
     </select> <br/>
 <input type="button" value="convertir" (click)="onConvertir()" /> <br/>
 somme convertie : {{montantConverti}}

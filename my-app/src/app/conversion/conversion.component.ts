@@ -17,7 +17,9 @@ export class ConversionComponent implements OnInit {
 
   onConvertir(){
     //préversion:
-    this.montantConverti = 2.0;
+    this.montantConverti = this.deviseService.convertir(this.codeDeviseSource,
+                                                        this.codeDeviseCible,
+                                                        this.montant);
   }
 
   constructor(private deviseService: DeviseService) {
@@ -25,6 +27,7 @@ export class ConversionComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.listeDevises = this.deviseService.rechercherDevises();
   }
 
 }

@@ -21,6 +21,8 @@ export class DeviseService {
 
   public convertir(codeMSource:string , codeMCible : string , montant: number) : number {
      //préversion de simulation
+     console.log("codeMSource="+codeMSource);
+     console.log("codeMCible="+codeMCible);
      return montant * 2.0;
   }
 
