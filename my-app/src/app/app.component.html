@@ -10,6 +10,6 @@
     <router-outlet></router-outlet>
     <!-- sera remplacé par welcomeComponent ou BasicComponent ou ...
          selon l'url/route courante -->
-    <app-footer></app-footer>
+    <app-footer (changementHumeur)="onChangementHumeur($event)"></app-footer>
      
 </div>
