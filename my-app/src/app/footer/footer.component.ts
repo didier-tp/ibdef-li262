@@ -24,7 +24,7 @@ export class FooterComponent implements OnInit {
     this.changementHumeur.emit( { value: this.humeur } );
   }
 
-  listeCouleurs = ["yellow" , "lightgrey"  , "cyan" , "blank"];
+  listeCouleurs = ["yellow" , "lightgrey"  , "cyan" ];
 
   constructor(public preferencesService : PreferencesService ) { 
     //injection automatique du service @injectable via constructeur de composant 
