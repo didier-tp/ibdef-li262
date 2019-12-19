@@ -7,6 +7,19 @@ import { PreferencesService } from '../common/service/preferences.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnChanges {
+
+  couleurFondPreferee  : string = "yellow";
+
+  ngOnInit() {
+    console.log("ngOnInit() appele avec titre = " + this.titre);
+    this.preferencesService.bsCouleurFond
+          .subscribe(
+            (nouvelleCouleur : string)=>{ 
+                  this.couleurFondPreferee = nouvelleCouleur;
+                  console.log("nouvelleCouleur:"+nouvelleCouleur);
+            }
+          )
+  }
   
   ngOnChanges(){
     console.log("ngOnChanges() appele avec titre = " + this.titre);
@@ -19,8 +32,6 @@ export class HeaderComponent implements OnInit, OnChanges {
     console.log("constructor() appele avec titre = " + this.titre);
    }
 
-  ngOnInit() {
-    console.log("ngOnInit() appele avec titre = " + this.titre);
-  }
+  
 
 }
