@@ -1,0 +1,10 @@
+WS REST toujours appelés via HTTP
+si appel en javascript depuis navigateur ===> appel ajax
+------------
+appels ajax:
+   - soit directement depuis XmlHttpRequest (xhr)  / tous les navigateurs
+   - soit via jQuery $.ajax()
+   - soit via Api "fectch" et "Promise"  / navigateurs récents
+   - soit via RxJs et compléments angular 
+----------
+	
