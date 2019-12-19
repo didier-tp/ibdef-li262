@@ -3,6 +3,7 @@ import { Devise } from '../data/devise';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { ConvResponse } from '../data/convResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +32,9 @@ export class DeviseService {
                       : Observable<number> {
     //.../devise-api/public/convert?source=EUR&target=USD&amount=200
     let url = `./devise-api/public/convert?source=${codeMSource}&target=${codeMCible}&amount=${montant}`;
-            return this.http.get<any>(url)
+            return this.http.get<ConvResponse>(url)
                        .pipe(
-                         map((objReponse:any)=> { return objReponse.result; })
+                         map((objReponse:ConvResponse)=> { return objReponse.result; })
                        );
      //préversion de simulation
      //console.log("codeMSource="+codeMSource);
