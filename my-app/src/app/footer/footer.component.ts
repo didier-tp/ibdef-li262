@@ -16,6 +16,12 @@ export class FooterComponent implements OnInit {
   humeur : string ="?";
   listeHumeurs= [ "?" , "bonneHumeur" , "mauvaiseHumeur"];
 
+  couleurFondPreferee : string ="yellow";
+
+  onChangeCouleur(){
+    this.preferencesService.majCouleurFond(this.couleurFondPreferee);
+  }
+
   @Output()
   changementHumeur : EventEmitter<ChangeHumeurEvent> = new EventEmitter<ChangeHumeurEvent>();
 
