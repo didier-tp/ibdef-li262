@@ -9,4 +9,10 @@ monnaieCible: <select [(ngModel)]="codeDeviseCible">
     </select> <br/>
 <input type="button" value="convertir" (click)="onConvertir()" /> <br/>
 somme convertie : {{montantConverti}}
+<hr/>
+<table border="1">
+    <tr *ngFor="let d of listeDevises">
+        <td>{{d.code}}</td><td>{{d.name}}</td><td>{{d.change}}</td>
+    </tr>
+</table>
 

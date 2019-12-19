@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Devise } from '../common/data/devise';
+import { map } from 'rxjs/operators'
 import { DeviseService } from '../common/service/devise.service';
 
 @Component({
@@ -32,6 +33,13 @@ export class ConversionComponent implements OnInit {
 
   ngOnInit() {
      this.deviseService.rechercherDevises()
+         .pipe(
+           map( (tabDevises:Devise[]) =>  
+            tabDevises.sort(
+              (d1,d2) => d1.code.localeCompare(d2.code)
+            )
+           )
+         )
          .subscribe(
             (tabDevises:Devise[])=>{ this.gererListeDevises(tabDevises);  },
             (error)=>{ console.log("erreur:" + error);}                      
