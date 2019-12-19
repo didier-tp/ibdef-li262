@@ -40,10 +40,26 @@ export class ConversionComponent implements OnInit {
             )
            )
          )
-         .subscribe(
+        /* .subscribe(
             (tabDevises:Devise[])=>{ this.gererListeDevises(tabDevises);  },
             (error)=>{ console.log("erreur:" + error);}                      
-         );
+         )*/
+         .subscribe( {
+          next: (tabDevises:Devise[])=>{ this.gererListeDevises(tabDevises);  },
+          error: (error)=>{ console.log("erreur:" + error);}  
+         }); 
+         
+         // .subscribe(cbSuccessOrNext,cbError,cbComplete); 
+         /* .subscribe(
+              {
+                //observer object with explicit subparts
+                next: cbSuccessOrNext ,
+                error : cbError,
+                complete : cbComplete
+              }
+          )
+         */
+      
       
   }
 
