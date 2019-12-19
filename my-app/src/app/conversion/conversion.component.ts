@@ -33,7 +33,6 @@ export class ConversionComponent implements OnInit {
   ngOnInit() {
      this.deviseService.rechercherDevises()
          .subscribe(
-           
            (tabDevises:Devise[])=>{ this.listeDevises = tabDevises;
                                     console.log("tabDevises:" + tabDevises)
                                   },
