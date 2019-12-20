@@ -16,7 +16,7 @@ export class ProductService {
   private currentIdb : IDBPDatabase = null;
 
   constructor(private onlineOfflineService : OnLineOffLineService) { 
-    this.initMyIdbSampleContent(); 
+    //this.initMyIdbSampleContent(); 
   }
 
   public getProducts() : Observable<Product[]> {
