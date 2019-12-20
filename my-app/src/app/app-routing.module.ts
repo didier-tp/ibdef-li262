@@ -6,12 +6,14 @@ import { BasicComponent } from './basic/basic.component';
 import { ConversionComponent } from './conversion/conversion.component';
 import { CalculatriceComponent } from './basic/calculatrice/calculatrice.component';
 import { TvaComponent } from './basic/tva/tva.component';
+import { AdminProdIdbComponent } from './admin-prod-idb/admin-prod-idb.component';
 
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'login', component: LoginComponent } ,
+  { path: 'admin-prod', component: AdminProdIdbComponent } ,
   { path: 'basic', component: BasicComponent ,
   children: [
    { path: 'tva', component: TvaComponent },

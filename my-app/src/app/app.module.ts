@@ -15,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BsUtilModule } from 'src/bs-util/bs-util.module';
 import { ConversionComponent } from './conversion/conversion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminProdIdbComponent } from './admin-prod-idb/admin-prod-idb.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     TvaComponent,
     LoginComponent,
     WelcomeComponent,
-    ConversionComponent
+    ConversionComponent,
+    AdminProdIdbComponent
   ],
   imports: [
     BrowserModule,
