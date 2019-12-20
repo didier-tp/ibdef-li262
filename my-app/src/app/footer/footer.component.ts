@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { PreferencesService } from '../common/service/preferences.service';
 import { TraductionService } from '../common/service/traduction.service';
+import { OnLineOffLineService } from '../common/service/on-line-off-line.service';
 
 export interface ChangeHumeurEvent {
   value : string;
@@ -15,6 +16,8 @@ export class FooterComponent implements OnInit {
 
   humeur : string ="?";
   listeHumeurs= [ "?" , "bonneHumeur" , "mauvaiseHumeur"];
+
+  private onLine:boolean;
 
   couleurFondPreferee : string ="yellow";
 
@@ -34,12 +37,15 @@ export class FooterComponent implements OnInit {
   listeCouleurs = ["yellow" , "lightgrey"  , "cyan" ];
 
   constructor(public preferencesService : PreferencesService,
-              public traductionService : TraductionService ) { 
+              public traductionService : TraductionService,
+              private onlineOfflineService: OnLineOffLineService ) { 
     //injection automatique du service @injectable via constructeur de composant 
     //angular 
   }
 
   ngOnInit() {
+    this.onlineOfflineService.connectionChanged
+            .subscribe( (onLine)=>{this.onLine = onLine;})
   }
 
 }
