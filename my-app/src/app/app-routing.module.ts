@@ -7,6 +7,7 @@ import { ConversionComponent } from './conversion/conversion.component';
 import { CalculatriceComponent } from './basic/calculatrice/calculatrice.component';
 import { TvaComponent } from './basic/tva/tva.component';
 import { AdminProdIdbComponent } from './admin-prod-idb/admin-prod-idb.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'login', component: LoginComponent } ,
   { path: 'admin-prod', component: AdminProdIdbComponent } ,
+  { path: 'chat' ,  component: ChatComponent } ,
   { path: 'basic', component: BasicComponent ,
   children: [
    { path: 'tva', component: TvaComponent },

@@ -16,6 +16,7 @@ import { BsUtilModule } from 'src/bs-util/bs-util.module';
 import { ConversionComponent } from './conversion/conversion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminProdIdbComponent } from './admin-prod-idb/admin-prod-idb.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminProdIdbComponent } from './admin-prod-idb/admin-prod-idb.component
     LoginComponent,
     WelcomeComponent,
     ConversionComponent,
-    AdminProdIdbComponent
+    AdminProdIdbComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
